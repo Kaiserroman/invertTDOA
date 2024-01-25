@@ -79,6 +79,9 @@ int main()
 	cout << "B: x = " << ans[1].x << " y = " << ans[1].y << endl;
 	cout << "C: x = " << ans[2].x << " y = " << ans[2].y << endl;
 
+	double check = pow((point::dist(pD, ans[0]) - point::dist(pD, ans[1]) - D_AB), 2) + pow((point::dist(pD, ans[1]) - point::dist(pD, ans[2]) - D_BC), 2) + pow((point::dist(pD, ans[0]) - point::dist(pD, ans[2]) - D_AC), 2) + pow((point::dist(pE, ans[0]) - point::dist(pE, ans[1]) - E_AB), 2) + pow((point::dist(pE, ans[1]) - point::dist(pE, ans[2]) - E_BC), 2) + pow((point::dist(pE, ans[0]) - point::dist(pE, ans[2]) - E_AC), 2) + pow((point::dist(pF, ans[0]) - point::dist(pF, ans[1]) - F_AB), 2) + pow((point::dist(pF, ans[1]) - point::dist(pF, ans[2]) - F_BC), 2) + pow((point::dist(pF, ans[0]) - point::dist(pF, ans[2]) - F_AC), 2);
+	cout << "check value = " << check << " ~0?" << endl;
+
 	system("pause");
 	return 0;
 }
